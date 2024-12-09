@@ -9,18 +9,10 @@ import "../database/checkConnection";
 // Import the Express application from ./app
 import app from "./app";
 
-import type { RequestHandler } from "express";
-
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
 
 // Start the server and listen on the specified port
-
-const sayWelcome: RequestHandler = (req, res) => {
-  res.send("Welcome to Wild Series !");
-};
-
-app.get("/", sayWelcome);
 
 app
   .listen(port, () => {
